@@ -1,0 +1,19 @@
+{
+  "name": "agenda",
+  "version": "1.0.0",
+  "description": "la mia bella agenda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "agenda"
+  ],
+  "author": "artoo",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7"
+  }
+}
