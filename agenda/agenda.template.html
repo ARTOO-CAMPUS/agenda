@@ -1,12 +1,13 @@
+<ng-include src="'navbar.template.html'"></ng-include>
 <div class="container">
-
 	<div class="row">
-		<div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
+		<div class="col-sm-6 col-md-4 text-center" ng-repeat="app in appuntamenti">
 			<div class="thumbnail" style="border:2px solid {{app.priorita}}; border-radius:10px;">
 				<img src="" alt="">
 				<div class="caption">
 					<h3>{{app.titolo}}</h3>
-					<p>{{app.data | date:'dd/MM/yyyy'}} alle: {{app.data | date:'HH:mm'}}</p>
+					<h4>{{app.data | date:'dd/MM/yyyy'}} alle: {{app.data | date:'HH:mm'}}</h4>
+					<br><br>
 					<p><a class="btn btn-primary" role="button">Apri</a> <a class="btn btn-danger" role="button">Elimina</a></p>
 				</div>
 			</div>
