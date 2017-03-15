@@ -11,12 +11,13 @@
 			</div>
 			<div class="form-group">
 				<select class="form-control" id="sel1" ng-init="$parent.colore='tutte'" ng-model="$parent.colore">
-					<option value="tutte">Tutte</option>
-					<option value="#ff0000">Alta</option>
-					<option value="#ffa500">Media</option>
-					<option value="#00ff00">Bassa</option>
+					<option style="background-color:#0000ff; color:aliceblue" value="tutte">Tutte</option>
+					<option style="background-color:#ff0000" value="#ff0000">Alta</option>
+					<option style="background-color:#ffa500" value="#ffa500">Media</option>
+					<option style="background-color:#00ff00" value="#00ff00">Bassa</option>
 				</select>
 			</div>
 		</form>
+		<button class="btn btn-primary navbar-btn" ui-sref-active="active" ui-sref="crea">Crea</button>
 	</div>
 </nav>

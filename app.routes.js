@@ -19,7 +19,7 @@ angular.module('app')
 				templateUrl: 'agenda/dettaglio.template.html',
 				controller: 'DettaglioCtrl',
 				resolve: {
-					appuntamento: function (AgendaSrv,$stateParams) {
+					appuntamento: function (AgendaSrv, $stateParams) {
 						return AgendaSrv.getAppuntamento($stateParams.id);
 					}
 				}

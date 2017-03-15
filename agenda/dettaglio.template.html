@@ -1,4 +1,9 @@
-<p>{{appuntamento.titolo}}</p>
-<p>{{appuntamento.data|date:'medium'}}</p>
-<p>{{appuntamento.descrizione}}</p>
-<p>{{appuntamento.priorita}}</p>
+<div ng-show="loading">
+	<img id="loading" src="https://thomas.vanhoutte.be/miniblog/wp-content/uploads/light_blue_material_design_loading.gif" alt="">
+</div>
+<div ng-hide="loading" class="container">
+	<p>{{appuntamento.titolo}}</p>
+	<p>{{appuntamento.data|date:'medium'}}</p>
+	<p>{{appuntamento.descrizione}}</p>
+	<p>{{appuntamento.priorita}}</p>
+</div>
