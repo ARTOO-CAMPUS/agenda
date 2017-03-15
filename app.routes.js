@@ -13,6 +13,11 @@ angular.module('app')
 						return AgendaSrv.getAppuntamenti();
 					}
 				}
+			})
+			.state('dettaglio', {
+				url: '/dettaglio/:id',
+				templateUrl: 'agenda/dettaglio.template.html',
+				controller: 'DettaglioCtrl',
 			});
 
 	});

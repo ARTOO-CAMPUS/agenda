@@ -8,7 +8,8 @@
 					<h3>{{app.titolo}}</h3>
 					<h4>{{app.data | date:'dd/MM/yyyy'}} alle: {{app.data | date:'HH:mm'}}</h4>
 					<br><br>
-					<p><a class="btn btn-primary" role="button">Apri</a> <a class="btn btn-danger" role="button">Elimina</a></p>
+					<p><a class="btn btn-primary" role="button" ui-sref="dettaglio({id:app.id})">Apri</a> <a class="btn btn-danger" role="button"
+						    ng-click="elimina($index)">Elimina</a></p>
 				</div>
 			</div>
 		</div>

@@ -1,9 +1,11 @@
-angular.module('app').controller('AgendaCtrl', function ($scope, appuntamenti) {
+angular.module('app').controller('AgendaCtrl', function ($scope, appuntamenti, AgendaSrv) {
 
 	$scope.appuntamenti = appuntamenti;
 
-	$scope.$watch('colore', function (colore) {
-		console.log(colore);
-	});
+	$scope.elimina = function (indice) {
+		AgendaSrv.deleteAppuntamento(indice);
+	}
+
+
 
 });
