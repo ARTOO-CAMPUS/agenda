@@ -7,7 +7,12 @@ angular.module('app')
 			.state('/', {
 				url: '/',
 				controller: 'AgendaCtrl',
-				templateUrl: 'agenda/agenda.template.html'
+				templateUrl: 'agenda/agenda.template.html',
+				resolve: {
+					appuntamenti: function (AgendaSrv) {
+						return AgendaSrv.getAppuntamenti();
+					}
+				}
 			});
 
 	});
