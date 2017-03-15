@@ -18,6 +18,11 @@ angular.module('app')
 				url: '/dettaglio/:id',
 				templateUrl: 'agenda/dettaglio.template.html',
 				controller: 'DettaglioCtrl',
+				resolve: {
+					appuntamento: function (AgendaSrv,$stateParams) {
+						return AgendaSrv.getAppuntamento($stateParams.id);
+					}
+				}
 			});
 
 	});
