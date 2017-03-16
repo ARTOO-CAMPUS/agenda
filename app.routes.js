@@ -22,6 +22,13 @@ angular.module('app')
 					appuntamento: function (AgendaSrv, $stateParams) {
 						return AgendaSrv.getAppuntamento($stateParams.id);
 					}
+				},
+				onEnter: function (appuntamento) {
+					console.log("sono entrato");
+					console.log(appuntamento);
+				},
+				onExit: function () {
+					console.log("sono uscito");
 				}
 			});
 
