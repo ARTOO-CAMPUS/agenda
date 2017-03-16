@@ -12,7 +12,11 @@ angular.module('app').controller('DettaglioCtrl',
 		$timeout(function () {
 			$scope.appuntamento = AgendaSrv.getAppuntamento($stateParams.id);
 			$scope.loading = false;
-		}, 1000);
+		}, 50);
+
+		$scope.modifica = function () {
+			console.log($scope.appuntamento);
+		}
 
 
 

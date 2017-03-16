@@ -1,9 +1,33 @@
 <div ng-show="loading">
-	<img id="loading" src="https://thomas.vanhoutte.be/miniblog/wp-content/uploads/light_blue_material_design_loading.gif" alt="">
+	<h2>STO CARICANDO .... </h2>
 </div>
 <div ng-hide="loading" class="container">
-	<p>{{appuntamento.titolo}}</p>
-	<p>{{appuntamento.data|date:'medium'}}</p>
-	<p>{{appuntamento.descrizione}}</p>
-	<p>{{appuntamento.priorita}}</p>
+	<form ng-submit="modifica()" novalidate>
+		<div class="form-group">
+			<label for="Titolo">Titolo</label>
+			<input type="text" class="form-control" id="Titolo" ng-model="appuntamento.titolo">
+		</div>
+		<div class="form-group">
+			<label for="Descrizione">Descrizione</label>
+			<input type="text" class="form-control" id="Descrizione" ng-model="appuntamento.descrizione">
+		</div>
+		<div class="form-group">
+			<label for="Luogo">Luogo</label>
+			<input type="text" class="form-control" id="Luogo" ng-model="appuntamento.luogo">
+		</div>
+		<div class="form-group">
+			<select class="form-control" id="sel1" ng-model="appuntamento.priorita">
+					<option style="background-color:#0000ff; color:aliceblue" value="tutte">Tutte</option>
+					<option style="background-color:#ff0000" value="#ff0000">Alta</option>
+					<option style="background-color:#ffa500" value="#ffa500">Media</option>
+					<option style="background-color:#00ff00" value="#00ff00">Bassa</option>
+				</select>
+		</div>
+		<div class="form-group">
+			<input type="datetime-local" ng-model="appuntamento.data">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+
 </div>
