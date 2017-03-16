@@ -30,6 +30,11 @@ angular.module('app')
 				onExit: function () {
 					console.log("sono uscito");
 				}
+			})
+			.state('crea',{
+				url:'/crea',
+				templateUrl:'agenda/nuova.template.html',
+				controller:'NuovaCtrl'
 			});
 
 	});
