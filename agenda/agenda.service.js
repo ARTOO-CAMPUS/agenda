@@ -8,7 +8,7 @@ angular.module('app').service('AgendaSrv', function () {
 			luogo: "domus stella maris",
 			priorita: "#ffa500"
 		}, {
-			id: 1,
+			id: 2,
 			titolo: "dentista",
 			data: new Date(),
 			descrizione: "oggi ci sarà da divertirsi... yahooooo",
@@ -16,7 +16,7 @@ angular.module('app').service('AgendaSrv', function () {
 			priorita: "#ff0000"
 		},
 		{
-			id: 1,
+			id: 3,
 			titolo: "booohh",
 			data: new Date(),
 			descrizione: "oggi ci sarà da divertirsi... yahooooo",
@@ -38,10 +38,19 @@ angular.module('app').service('AgendaSrv', function () {
 		});
 	}
 
+	var aggiornaAppuntamento = function (app) {
+		var updateoggetto = angular.copy(app);
+		var indice = appuntamenti.findIndex(function (el) {
+			return el.id == app.id;
+		})
+		appuntamenti.splice(indice, 1, updateoggetto);
+	}
+
 
 	return {
 		getAppuntamenti: getAppuntamenti,
 		deleteAppuntamento: deleteAppuntamento,
-		getAppuntamento: getAppuntamento
+		getAppuntamento: getAppuntamento,
+		aggiornaAppuntamento: aggiornaAppuntamento
 	}
 });

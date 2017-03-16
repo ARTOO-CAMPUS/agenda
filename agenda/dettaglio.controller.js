@@ -4,7 +4,8 @@ angular.module('app').controller('DettaglioCtrl',
 		appuntamento,
 		AgendaSrv,
 		$timeout,
-		$stateParams) {
+		$stateParams,
+		$state) {
 
 		$scope.loading = true;
 		// $scope.appuntamento = appuntamento;
@@ -15,7 +16,7 @@ angular.module('app').controller('DettaglioCtrl',
 		}, 50);
 
 		$scope.modifica = function () {
-			console.log($scope.appuntamento);
+			AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
 		}
 
 
