@@ -1,7 +1,7 @@
 <ng-include src="'navbar.template.html'"></ng-include>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-md-4 text-center" ng-repeat="app in appuntamenti | filter:ricerca | filtroPriorita:colore">
+		<div class="col-sm-6 col-md-4 text-center" ng-repeat="app in appuntamenti | filter:ricerca | filtroPriorita:colore | orderBy:'data'">
 			<div class="thumbnail" style="border:2px solid {{app.priorita}}; border-radius:10px;" ng-class="{'alta':app.priorita=='#ff0000','media':app.priorita=='#ffa500','bassa':app.priorita=='#00ff00'}">
 				<img src="" alt="">
 				<div class="caption">

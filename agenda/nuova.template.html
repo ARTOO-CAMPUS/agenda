@@ -1,0 +1,34 @@
+<div class="container">
+	</br>
+	</br>
+	<button class="btn btn-success" ng-click="back()">Indietro</button>
+	</br>
+	</br>
+	<form ng-submit="crea()" novalidate>
+		<div class="form-group">
+			<label for="Titolo">Titolo</label>
+			<input type="text" class="form-control" id="Titolo" ng-model="appuntamento.titolo">
+		</div>
+		<div class="form-group">
+			<label for="Descrizione">Descrizione</label>
+			<input type="text" class="form-control" id="Descrizione" ng-model="appuntamento.descrizione">
+		</div>
+		<div class="form-group">
+			<label for="Luogo">Luogo</label>
+			<input type="text" class="form-control" id="Luogo" ng-model="appuntamento.luogo">
+		</div>
+		<div class="form-group">
+			<select class="form-control" id="sel1" ng-model="appuntamento.priorita">
+					<option style="background-color:#ff0000" value="#ff0000">Alta</option>
+					<option style="background-color:#ffa500" value="#ffa500">Media</option>
+					<option style="background-color:#00ff00" value="#00ff00">Bassa</option>
+				</select>
+		</div>
+		<div class="form-group">
+			<input type="datetime-local" ng-model="appuntamento.data">
+		</div>
+		<button type="submit" class="btn btn-default">Crea</button>
+	</form>
+
+
+</div>

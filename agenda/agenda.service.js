@@ -46,11 +46,23 @@ angular.module('app').service('AgendaSrv', function () {
 		appuntamenti.splice(indice, 1, updateoggetto);
 	}
 
+	var creaAppuntamento = function (nuovo) {
+		var nuovoAppuntamento = angular.copy(nuovo);
+		var arrayId = [];
+		appuntamenti.forEach(function (el) {
+			arrayId.push(el.id);
+		});
+		var id = Math.max(...arrayId);
+		nuovoAppuntamento.id = ++id;
+		appuntamenti.push(nuovoAppuntamento);
+	}
+
 
 	return {
 		getAppuntamenti: getAppuntamenti,
 		deleteAppuntamento: deleteAppuntamento,
 		getAppuntamento: getAppuntamento,
-		aggiornaAppuntamento: aggiornaAppuntamento
+		aggiornaAppuntamento: aggiornaAppuntamento,
+		creaAppuntamento: creaAppuntamento
 	}
 });

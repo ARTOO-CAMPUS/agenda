@@ -31,10 +31,10 @@ angular.module('app')
 					console.log("sono uscito");
 				}
 			})
-			.state('crea',{
-				url:'/crea',
-				templateUrl:'agenda/nuova.template.html',
-				controller:'NuovaCtrl'
+			.state('crea', {
+				url: '/crea',
+				templateUrl: 'agenda/nuova.template.html',
+				controller: 'NuovaCtrl'
 			});
 
 	});
